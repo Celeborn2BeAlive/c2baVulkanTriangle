@@ -1,7 +1,7 @@
 file(
     GLOB
     SRC_FILES
-    *.cpp *.hpp *.h
+    *.cpp *.hpp *.h *.c
 )
 
 add_definitions(-D_USE_MATH_DEFINES)

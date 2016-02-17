@@ -599,6 +599,7 @@ public:
 		// Load shaders
 		VkPipelineShaderStageCreateInfo shaderStages[2] = { {},{} };
 
+#define USE_GLSL 1
 #ifdef USE_GLSL
 		shaderStages[0] = loadShaderGLSL("shaders/triangle.vert", VK_SHADER_STAGE_VERTEX_BIT);
 		shaderStages[1] = loadShaderGLSL("shaders/triangle.frag", VK_SHADER_STAGE_FRAGMENT_BIT);
