@@ -37,7 +37,7 @@ class VulkanExampleBase
 {
 private:	
 	// Set to true when example is created with enabled validation layers
-	bool enableValidation = false;
+	bool enableValidation = true;
 	// Create application wide Vulkan instance
 	VkResult createInstance(bool enableValidation);
 	// Create logical Vulkan device based on physical device

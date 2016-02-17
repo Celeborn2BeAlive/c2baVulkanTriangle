@@ -15,6 +15,7 @@ if(WIN32)
 
         set(SDL_LIBRARIES ${CMAKE_LIBRARY_PATH}/SDL2.lib ${CMAKE_LIBRARY_PATH}/SDL2main.lib)
         set(VULKAN_LIBRARIES ${CMAKE_LIBRARY_PATH}/vulkan-1.lib)
+        set(GLFW_LIBRARIES ${CMAKE_LIBRARY_PATH}/glfw3.lib)
         
         set(DLL_3RD ${CMAKE_SOURCE_DIR}/third-party/bin/x64)
         file(GLOB 3RD_PARTY_DLL_FILES ${DLL_3RD}/*.dll)
@@ -41,3 +42,4 @@ target_link_libraries(c2baVulkanTriangle ${SDL_LIBRARIES} ${VULKAN_LIBRARIES})
 c2ba_copy_dll_post_build(c2baVulkanTriangle "${3RD_PARTY_DLL_FILES}")
 
 add_subdirectory(fromSamples)
+add_subdirectory(vulkanTriangleGLFW)
