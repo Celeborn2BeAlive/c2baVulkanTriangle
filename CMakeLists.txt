@@ -43,3 +43,4 @@ c2ba_copy_dll_post_build(c2baVulkanTriangle "${3RD_PARTY_DLL_FILES}")
 
 add_subdirectory(fromSamples)
 add_subdirectory(vulkanTriangleGLFW)
+add_subdirectory(Lava)
