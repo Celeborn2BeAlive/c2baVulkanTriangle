@@ -36,7 +36,7 @@ int main()
     while(window.isRunning()) {
         window.updateEvent();
 
-        v += 0.0001;
+        v += 0.00001;
 
         window.begin();
         VkCommandBufferBeginInfo bi;
@@ -72,6 +72,7 @@ int main()
          vkEndCommandBuffer(commandBuffer);
 
          VkSubmitInfo vi;
+         memset(&vi, 0, sizeof(vi));
 
          vi.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
          vi.commandBufferCount = 1;

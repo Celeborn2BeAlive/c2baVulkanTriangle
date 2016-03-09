@@ -47,6 +47,7 @@ void SurfaceWindow::initFrameBuffers() {
 
 void SurfaceWindow::createSwapchain() {
     VkSwapchainCreateInfoKHR info;
+    memset(&info, 0, sizeof(info));
 
     uint32_t nFormat;
     vkGetPhysicalDeviceSurfaceFormatsKHR(mDevice, mSurface, &nFormat, nullptr);
